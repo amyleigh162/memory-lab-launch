@@ -1,0 +1,16 @@
+<html>
+<body>
+    <iframe id="videoFrame" width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID1?autoplay=1" frameborder="0" allow="autoplay" onload="loadNextVideo()"></iframe>
+    <script>
+        const videoIds = ['<iframe src="https://arizona.aviaryplatform.com/embed/media/159333?media=159333&t=60&e=120&auto_play=true" allow="fullscreen" frameborder="0"></iframe>', 'https://arizona.aviaryplatform.com/r/c824b2z53w?media=159319&t=60&e=120&auto_play=true']; 
+        let currentVideo = 0;
+
+        function loadNextVideo() {
+            currentVideo++;
+            if (currentVideo < videoIds.length) {
+                document.getElementById('videoFrame').src = 'https://www.youtube.com/embed/' + videoIds[currentVideo] + '?autoplay=1';
+            }
+        }
+    </script>
+</body>
+</html>
